@@ -1,0 +1,20 @@
+### Node ###
+
+node_modules
+bower_components
+npm-debug.log
+
+### IDEA / WebStorm ###
+
+.idea/
+
+### Linux ###
+
+*~
+.~lock*
+
+### specific files/dirs ###
+
+dist/
+src/styles/*.css
+*.log
