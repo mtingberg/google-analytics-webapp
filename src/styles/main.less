@@ -1,0 +1,244 @@
+@import (inline) 'vendor/normalize.css';
+@import './variables';
+@import './mixins';
+
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    background: #e3e3e3;
+    font-family: 'Roboto Regular', 'Arial', 'Sans-Serif', 'serif';
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+img {
+    border: none;
+}
+
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+
+    &.flicker-link {
+        display: inline-block;
+        color: #271F78;
+        font-weight: 700;
+        font-size: 1.2rem;
+        font-family: 'Proxima Nova', 'helvetica neue', helvetica, arial, sans-serif;
+        letter-spacing: 0.05rem;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.card {
+    background: #fafafa;
+    margin: 0;
+    padding: 2.3rem;
+    .card-shadow;
+}
+
+h1 {
+    &.photographer-heading {
+        font-size: 1.8em;
+        margin: 0 1.6rem 3.4rem 0;
+        font-weight: normal;
+        color: #271f78;
+        display: inline-block;
+    }
+}
+
+.image-container {
+    display: flex;
+    display: -webkit-flex;
+
+    -webkit-flex-direction: row;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+
+    align-content: flex-start;
+    -webkit-align-content: flex-start;
+
+    width: 45rem;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+
+    &.image-element {
+        -webkit-flex: 0 1 auto;
+        flex: 0 1 auto;
+
+        margin: 0 3rem 2rem 0;
+        padding: 0;
+        position: relative;
+
+        img {
+            margin: 0;
+            padding: 0;
+            width: @image-element-width-desktop;
+        }
+
+        figcaption {
+            margin: 0;
+            width: @image-element-width-desktop;
+            color: #FFF;
+            font-size: 0.9rem;
+            border-top: 1px solid #CCC;
+            position: absolute;
+            bottom: 0.2rem;
+            padding: 0.2rem 0.4rem;
+            word-wrap: normal;
+        }
+    }
+}
+
+.transparent {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 30rem) {
+    .card {
+        padding: 1.3rem;
+    }
+
+    .image-container {
+        width: initial;
+        flex-direction: column;
+    }
+
+    h1 {
+        &.photographer-heading {
+            font-size: 1.6em;
+            margin: 0 1.6rem 0.7rem 0;
+        }
+    }
+
+    a {
+        &.flicker-link {
+            margin: 0 1.6rem 1.8rem 0;
+        }
+    }
+
+    figure {
+        &.image-element {
+            margin: 0 0 0.9rem 0;
+            position: inherit;
+
+            img {
+                border: none;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+                width: @image-width-portrait;
+            }
+
+            figcaption {
+                margin: 0;
+                width: @image-caption-width-portrait;
+                color: #5c5a5a;
+                font-size: 1rem;
+                border-top: none;
+                padding: 0.1rem 0 0 0.4rem;
+                word-wrap: normal;
+                position: inherit;
+                vertical-align: top;
+                display: inline-block;
+                background: rgba(0, 0, 0, 0);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 30rem) and (max-width: 36rem) {
+    .card {
+        width: 100%;
+    }
+
+    .image-container {
+        width: initial;
+    }
+
+    figure {
+        &.image-element {
+            img {
+                width: @image-element-width-landscape;
+            }
+
+            figcaption {
+                width: @image-element-width-landscape;
+            }
+
+            margin: 0 2rem 1.5rem 0;
+        }
+    }
+}
+
+@media screen and (min-width: 36rem) and (max-width: 47rem) {
+    .card {
+        width: 100%;
+    }
+
+    .image-container {
+        width: initial;
+    }
+
+    figure {
+        &.image-element {
+            img {
+                width: @image-element-width-landscape;
+            }
+
+            figcaption {
+                width: @image-element-width-landscape;
+            }
+
+            margin: 0 2rem 1.5rem 0;
+        }
+    }
+}
+
+@media screen and (min-width: 47rem) {
+    figure {
+        &.image-element {
+            img {
+                width: @image-element-width-desktop;
+            }
+
+            figcaption {
+                width: @image-element-width-desktop;
+            }
+
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
+        }
+    }
+}
