@@ -95,7 +95,6 @@
         "Response",
         "self",
 
-        "MozActivity",
         "File",
         "indexedDB",
         "IDBKeyRange",
