@@ -1,6 +1,6 @@
 {
   "name": "google-analytics-webapp",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "description": "",
   "main": "Gruntfile.js",
   "repository": {
@@ -19,8 +19,5 @@
     "grunt-contrib-less": "1.0.0",
     "grunt-browserify": "3.3.0",
     "browserify-zepto": "1.1.4"
-  },
-  "scripts": {
-    "test": "grunt test"
   }
 }
