@@ -50,4 +50,4 @@ stick to it for consistency reasons.
 
 ## Acknowledgements
 
-Filter by Tag is a project by [Magnus Tingberg](https://github.com/mtingberg).
+google-analytics-webapp is a project by [Magnus Tingberg](https://github.com/mtingberg).
